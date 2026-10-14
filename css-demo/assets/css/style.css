@@ -161,7 +161,7 @@ nav.primary ul li a:hover{
 #blog .post{
   box-shadow: 0 4px 8px rgba(0,0,0,.6);
   padding:10px;
-  front-size:.8rem;
+  font-size:.8rem;
   flex:1
 }
 
