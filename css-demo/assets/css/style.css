@@ -1,7 +1,3 @@
-/* body{
-    background-color:darkgreen;
-} */
-
 /* ---------------Box Sizing-----------------
 color scheme for demo: #6BFF7F(main headings), #FFA53A(sub/smaller headings), #121413(page background), #2B2F2D(Header/Footer), and #D9CFA3 (p text and li text)
 Font for demo: headers, Chakra Petch.  text, IBM Plex Sans
@@ -202,7 +198,7 @@ nav.primary ul li a:hover{
 
 #practice h2{
   color: #6BFF7F;
-  border-bottom: 1pc dotted #D9CFA3;
+  border-bottom: 1px dotted #D9CFA3;
 }
 
 #practice h3{
