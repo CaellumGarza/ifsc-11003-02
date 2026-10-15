@@ -215,103 +215,83 @@ nav.primary ul li a:hover{
   line-height:1.6;
 }
 
-/* ----- Tables --- */
-
 #practice table{
+  border:1px solid#D9CFA3;
   width:100%;
-  border-collapse:collapse;   /* merges double borders into single lines */
-  margin:20px 0;
+  border-collapse:collapse;
 }
- 
+
 #practice caption{
-  color:#FFA53A;
-  font-size:1.2rem;
   font-weight:bold;
-  text-align:left;
-  padding-bottom:8px;
+  margin: 10px;
+  font-size: 1.3rem;
 }
- 
-#practice th, #practice td{
-  border:1px solid #2B2F2D;
-  padding:8px 12px;
-  text-align:left;
-}
- 
-#practice thead th{
-  background-color:#2B2F2D;
-  color:#6BFF7F;
-  text-transform:uppercase;
-  letter-spacing:1px;
-}
- 
-/* zebra stripes: every other row gets a background */
-#practice tbody tr:nth-child(even){
-  background-color:rgba(43,47,45,.5);
-}
- 
-#practice tbody tr:hover{
-  background-color:#2B2F2D;
-}
- 
-/* lines up the Cost column on the right */
-#practice td:last-child{
-  text-align:right;
-}
-
-
-/* ---- Lists --- */
-#practice li{
-  margin-bottom:5px;
-}
- 
-/* Ordered list (the instructions) */
-#practice ol{
-  list-style-type:decimal-leading-zero;   /* 01, 02, 03... */
-}
- 
-#practice ol li::marker{
-  color:#6BFF7F;
-  font-weight:bold;
-}
- 
-/* Unordered list (the grocery list) */
-#practice ul{
-  list-style-type:square;
-}
- 
-#practice ul li::marker{
-  color:#FFA53A;
-}
- 
-/* Nested list: a ul inside a ul */
-#practice ul ul{
-  list-style-type:circle;
-  margin:5px 0;
-}
- 
-#practice ul ul li::marker{
+#practice th{
+  background-color:#121413;
   color:#D9CFA3;
+  padding: 7.5px;
 }
- 
-/* Description list (terms and descriptions) */
-#practice dl{
-  border-left:4px solid #FFA53A;
-  padding-left:15px;
+
+
+#practice tr{}
+
+#practice tr:nth-child(even){
+  background-color: rgba(255,165,58,0.2);
 }
- 
-#practice dt{
+
+#practice tr:hover{
+  background-color: rgba(0,0,0,0.3);
+}
+
+#practice td:nth-child(n+2){
+  text-align: right;
+}
+
+
+#practice td{
+  border: 1px solid #D9CFA3;
+  padding:5px;
+}
+
+#practice ol{
+  list-style-type:lower-roman
+}
+
+#practice ul ul{
   color:#FFA53A;
+}
+
+#practice dl{}
+
+#practice dt{
   font-weight:bold;
-  margin-top:10px;
 }
- 
+
 #practice dd{
-  margin-left:20px;
+  margin:0;
 }
 
+dd + dt{
+  color:#6BFF7F;
+  margin-top:20px;
+}
 
+#practice blockquote{
+  border: 4px solid #D9CFA3;
+  padding: 20px 40px;
+  margin: 40px 80px;
+  border-radius:30px 0;
+  background-color: #121413;
+  color:#D9CFA3;
+  text-shadow:1px 1px #121413;
+}
 
-
+#practice blockquote cite{
+  display:block ;
+  text-align:right;
+  margin-top:20px;
+  font-size:0.9rem;
+}
 
 
 
