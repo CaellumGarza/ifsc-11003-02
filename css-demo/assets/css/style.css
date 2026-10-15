@@ -17,7 +17,9 @@ html {
  
 /*---------------------Responsive Images ---------*/
 
-
+img{
+  max-width:100%;
+}
 
 
 
@@ -40,14 +42,7 @@ html {
 .container{
   width:80vw;
   max-width:960px;
-  margin:30px auto;
-}
-
-.img-right{
-  float:right;
-  border:2px solid #c0c0c0;
-  padding:5px;
-  margin:10px 0 10px 20px;
+  margin:40px auto;
 }
 
 .img-left{
@@ -55,6 +50,13 @@ html {
   border:2px solid #c0c0c0;
   padding:5px;
   margin:10px 20px 10px 0;
+}
+
+.img-right{
+  float:right;
+  border:2px solid #c0c0c0;
+  padding:5px;
+  margin:10px 0 10px 20px;
 }
 
 .img-center{
@@ -72,18 +74,29 @@ html {
 body{
   font-family: "Rationale", sans-serif;
   margin:0;
+  background-color: #121413;
+  color: #D9CFA3;
 }
 
 header.primary{
-  background-color:aquamarine;
-  color:white;
+  background-color: #2B2F2D;
+  color:#D9CFA3;
   text-align:center;
   text-shadow:1.4px 1.4px #000000;
   padding:40px;
+  /* Long Form */
+  padding-top: 40px;
+  padding-right: 40px;
+  padding-bottom: 40px;
+  padding-left: 40px;
+  /* T/R/B/L */
+  padding: 40px 40px 20px 40px;
+  /* T/B  |  L/R */
+  padding: 20px 40px;
 }
 
 header.primary a{
-  color:#ffffff;
+  color:#D9CFA3;
   text-decoration:none ;
 }
 
@@ -92,9 +105,15 @@ header.primary h1{
   margin:0;
 }
 
+header.primary h1 a{
+  color:#6BFF7F
+}
+
+
 header.primary p.subtitle{
   font-size:1.5rem;
   font-weight:bold;
+  color:#FFA53A;
   /*top left and right, bottom*/
   margin:10px 0 20px;
   letter-spacing: 1px;
@@ -105,8 +124,8 @@ nav.primary ul{
   padding:0;
   display:flex;
   flex-direction:row;
-  justify-content:space-evenly ;
-  gap:10px;
+  justify-content:center ;
+  gap:30px;
 }
 
 nav.primary ul li{
@@ -130,8 +149,8 @@ nav.primary ul li a:hover{
 
 
 #content h2{
-  color:aquamarine;
-  border-bottom: 1px dotted #000000
+  color:#6BFF7F;
+  border-bottom: 1px dotted #D9CFA3
 }
 
 #content p{
@@ -146,54 +165,153 @@ nav.primary ul li a:hover{
   gap:20px;
   padding-bottom:40px;
   margin-bottom:40px;
-  border-bottom: 1px solid #000000;
+  border-bottom: 1px solid #2B2F2D;
   margin-top:40px;
+  border-top: 1px solid #2B2F2D
 }
 
-#blog h2{
-  flex: 0 0 100%;
-}
 
 #blog figure{
   margin: 0;
 }
 
 #blog .post{
+  background-color:#2B2F2D;
   box-shadow: 0 4px 8px rgba(0,0,0,.6);
   padding:10px;
   font-size:.8rem;
   flex:1
 }
 
+#blog h2{
+  flex: 0 0 100%; 
+  color:#6BFF7F  /* does this get cut */
+}
+
+
 #blog time.post-date, #blog figcaption{
   text-transform:uppercase;
-  font-size: 1.1;
+  font-size:1.1rem;
 }
 
 #blog a {
-  color:chocolate;
+  color:#FFA53A;
 }
 
 /* New added section */
 
 #practice h2{
-  color: #3db638;
-  border-bottom: 1pc solid #cccccc;
+  color: #6BFF7F;
+  border-bottom: 1pc dotted #D9CFA3;
 }
 
 #practice h3{
-  border-left:7.5px solid #3db638;
+  color:#FFA53A;
+  border-left:7.5px solid #FFA53A;
   padding:5px 0 5px 10px;
 }
 
 #practice a:link, #practice a:visited{
-  color:deeppink;
+  color:#FFA53A;
 }
 
 #practice {
   line-height:1.6;
 }
 
+/* ----- Tables --- */
+
+#practice table{
+  width:100%;
+  border-collapse:collapse;   /* merges double borders into single lines */
+  margin:20px 0;
+}
+ 
+#practice caption{
+  color:#FFA53A;
+  font-size:1.2rem;
+  font-weight:bold;
+  text-align:left;
+  padding-bottom:8px;
+}
+ 
+#practice th, #practice td{
+  border:1px solid #2B2F2D;
+  padding:8px 12px;
+  text-align:left;
+}
+ 
+#practice thead th{
+  background-color:#2B2F2D;
+  color:#6BFF7F;
+  text-transform:uppercase;
+  letter-spacing:1px;
+}
+ 
+/* zebra stripes: every other row gets a background */
+#practice tbody tr:nth-child(even){
+  background-color:rgba(43,47,45,.5);
+}
+ 
+#practice tbody tr:hover{
+  background-color:#2B2F2D;
+}
+ 
+/* lines up the Cost column on the right */
+#practice td:last-child{
+  text-align:right;
+}
+
+
+/* ---- Lists --- */
+#practice li{
+  margin-bottom:5px;
+}
+ 
+/* Ordered list (the instructions) */
+#practice ol{
+  list-style-type:decimal-leading-zero;   /* 01, 02, 03... */
+}
+ 
+#practice ol li::marker{
+  color:#6BFF7F;
+  font-weight:bold;
+}
+ 
+/* Unordered list (the grocery list) */
+#practice ul{
+  list-style-type:square;
+}
+ 
+#practice ul li::marker{
+  color:#FFA53A;
+}
+ 
+/* Nested list: a ul inside a ul */
+#practice ul ul{
+  list-style-type:circle;
+  margin:5px 0;
+}
+ 
+#practice ul ul li::marker{
+  color:#D9CFA3;
+}
+ 
+/* Description list (terms and descriptions) */
+#practice dl{
+  border-left:4px solid #FFA53A;
+  padding-left:15px;
+}
+ 
+#practice dt{
+  color:#FFA53A;
+  font-weight:bold;
+  margin-top:10px;
+}
+ 
+#practice dd{
+  margin-left:20px;
+}
 
 
 
@@ -203,8 +321,8 @@ nav.primary ul li a:hover{
 
 
 aside[aria-label="Sidebar"]{
-  background-color:#172635;
-  color:#ffffff;
+  background-color:#2B2F2D;
+  color:#D9CFA3;
   padding: 40px 0;
 }
 
@@ -221,7 +339,7 @@ aside div.container a:last-child{
   text-align:right;
 }
 aside div.container a{
-  color:#ffffff;
+  color:#FFA53A;
 }
 
 
@@ -232,12 +350,13 @@ aside .widget footer{
 }
 
 footer.primary{
-  background-color:aquamarine;
-  color:white;
+  background-color:#2B2F2D;
+  padding:5px;
+  color:#D9CFA3;
   text-align:center;
   text-shadow:.9px .9px #000000;
-  padding:40px;
-  font-size:18px;
+  /* padding:40px;
+  font-size:18px; */
 }
 
 
@@ -262,7 +381,13 @@ nav.primary ul{
   gap:5px;
 }
 
+.container{
+  width:90vw;
+}
 
+#blog{
+  flex-direction:column;
+}
 
 
 

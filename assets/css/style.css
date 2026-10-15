@@ -1,3 +1,57 @@
+/* ---------------Landing Page-----------------
+color scheme: #6BFF7F(main headings), #FFA53A(sub/smaller headings), #121413(page background), #2B2F2D(Header/Footer), and #D9CFA3 (p text and li text)
+*/
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
 body{
-    background-color: crimson;
+  background-color:#121413;
+  color:#D9CFA3;
+  font-family:"Rationale", sans-serif;
+  margin:0;
+  padding:40px 20px;
+  text-align:center;
+}
+
+h1{
+  color:#6BFF7F;
+  font-size:3rem;
+  text-shadow:1px 1px #000000;
+  margin:0 0 30px;
+}
+
+nav ul{
+  padding:0;
+  margin:0 auto;
+  max-width:500px;
+  display:flex;
+  flex-direction:column;
+  gap:15px;
+}
+
+nav ul li{
+  list-style-type:none;
+}
+
+nav ul li a{
+  display:block;
+  background-color:#2B2F2D;
+  color:#FFA53A;
+  text-decoration:none;
+  font-size:1.3rem;
+  padding:15px;
+  border:1px solid #000000;
+  border-radius:8px;
+  transition:.3s;
+}
+
+nav ul li a:hover{
+  background-color:#000000;
+  color:#6BFF7F;
 }
