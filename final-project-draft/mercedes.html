@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Mercedes team profile: drivers, history and facts from the 2026 season.">
+  <meta name="author" content="Caellum Garza">
+  <title>Mercedes | Lights Out</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,400;0,600;0,700;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<!-- team2 = Mercedes colors for this whole page -->
+<body data-team="team2">
+  <main>
+
+    <!-- ================= SITE HEADER ================= -->
+    <header class="primary" role="banner">
+      <div class="container">
+        <h1>
+          <a href="index.html">
+            <img src="assets/img/formula-one-logo.svg" alt="" class="logo">
+            Lights Out
+          </a>
+        </h1>
+        <h2>Four teams, every track and the countdown to lights out.</h2>
+        <nav role="navigation">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="williams.html" aria-current="page">Teams</a></li>
+            <li><a href="tracks.html">Tracks</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <div id="theme-switcher">
+          <button type="button" data-team="team1">Williams</button>
+          <button type="button" data-team="team2">Mercedes</button>
+          <button type="button" data-team="team3">Red Bull</button>
+          <button type="button" data-team="team4">Ferrari</button>
+          <button type="button" data-team="default">Default</button>
+        </div>
+      </div>
+    </header>
+
+    <!-- ================= TEAM TABS ================= -->
+    <!-- On each team page, move aria-current="page" to that team's tab -->
+    <nav class="team-tabs container" aria-label="Teams">
+      <ul>
+        <li><a href="williams.html">Williams</a></li>
+        <li><a href="mercedes.html" aria-current="page">Mercedes</a></li>
+        <li><a href="red-bull.html">Red Bull</a></li>
+        <li><a href="ferrari.html">Ferrari</a></li>
+      </ul>
+    </nav>
+
+    <!-- ================= TEAM PROFILE ================= -->
+    <section id="team" class="container">
+      <h2>Mercedes</h2>
+
+      <figure>
+        <img src="assets/img/mercedes.jpg" alt="Kimi Antonelli driving the Mercedes at the 2026 Bahrain Grand Prix">
+        <figcaption>Photo: <a href="https://commons.wikimedia.org/wiki/File:2026_Bahrain_GP_-_Mercedes_-_Kimi_Antonelli_-_Race.jpg">Liauzh</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>, via Wikimedia Commons</figcaption>
+      </figure>
+
+      <div class="team-layout">
+
+        <!-- Left: about + drivers -->
+        <div class="team-main">
+          <h3>About the team</h3>
+          <p>Team history paragraph goes here.</p>
+          <p>Second paragraph goes here.</p>
+
+          <h3>Drivers</h3>
+          <ul class="drivers">
+            <li>
+              <span class="number">##</span>
+              <strong>Driver 1 Name</strong>
+              Country
+            </li>
+            <li>
+              <span class="number">##</span>
+              <strong>Driver 2 Name</strong>
+              Country
+            </li>
+          </ul>
+        </div>
+
+        <!-- Right: quick facts table -->
+        <table class="team-facts">
+          <caption>At a glance</caption>
+          <tbody>
+            <tr>
+              <th scope="row">Base</th>
+              <td>ADD CITY</td>
+            </tr>
+            <tr>
+              <th scope="row">Team principal</th>
+              <td>ADD NAME</td>
+            </tr>
+            <tr>
+              <th scope="row">Power unit</th>
+              <td>ADD ENGINE</td>
+            </tr>
+            <tr>
+              <th scope="row">First season</th>
+              <td>ADD YEAR</td>
+            </tr>
+            <tr>
+              <th scope="row">Constructors' titles</th>
+              <td>ADD NUMBER</td>
+            </tr>
+          </tbody>
+        </table>
+
+      </div>
+    </section>
+
+    <!-- ================= SITE FOOTER ================= -->
+    <footer id="colophon" role="contentinfo">
+      <p>&copy; 2026 Caellum Garza | <a href="mailto:cagarza@ualr.edu">Report a Problem</a></p>
+      <p>This site was built as a student project for IFSC 11003 at UALR and is for educational use only. It is not affiliated with or endorsed by Formula 1, the FIA, or any team shown. Photos are credited under each image.</p>
+    </footer>
+
+  </main>
+</body>
+
+</html>
