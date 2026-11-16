@@ -5,8 +5,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Site Description">
-  <meta name="author" content="Your Name">
+  <meta name="author" content="Caellum">
   <title>Site Title</title>
+  <!-- CHANGED: added the font the CSS uses -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,400;0,600;0,700;1,900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
@@ -15,29 +19,33 @@
 
     <!-- ================= SITE HEADER (full width) ================= -->
     <header class="primary" role="banner">
-      <h1><a href="index.html">Site Title</a></h1>
-      <h2>Site Tagline</h2>
-      <nav role="navigation">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="page2.html">Page 2</a></li>
-          <li><a href="page3.html">Page 3</a></li>
-          <li><a href="page4.html">Page 4</a></li>
-        </ul>
-      </nav>
-      <!-- Placeholder for the team-color theme switcher (JS later) -->
-       <!-- Also use a default dark theme on landing page -->
-      <div id="theme-switcher">
-        <button type="button" data-team="team1">Team 1</button>
-        <button type="button" data-team="team2">Team 2</button>
-        <button type="button" data-team="team3">Team 3</button>
-        <button type="button" data-team="team4">Team 4</button>
-        <button type="button" data-team="default">Default</button>
-      </div>
+      <div class="container"> <!-- CHANGED: added container -->
+        <h1>
+  <a href="index.html">
+    <img src="assets/img/formula_one_logo.svg" alt="" class="logo">Lights Out</a></h1>
+        <h2>Four teams, every track and the countdown to lights out.</h2>
+        <nav role="navigation">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="williams.html">Teams</a></li>
+            <li><a href="tracks.html">Tracks</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <!-- Placeholder for the team-color theme switcher (JS later) -->
+        <!-- Also use a default dark theme on landing page -->
+        <div id="theme-switcher">
+          <button type="button" data-team="team1">Williams</button>
+          <button type="button" data-team="team2">Mercedes</button>
+          <button type="button" data-team="team3">Red Bull</button>
+          <button type="button" data-team="team4">Ferrari</button>
+          <button type="button" data-team="default">Default</button>
+        </div>
+      </div> <!-- CHANGED: closes container -->
     </header>
 
     <!-- ================= CONTENT SECTION ================= -->
-    <section id="content">
+    <section id="content" class="container"> <!-- CHANGED: added class="container" -->
       <header>
         <h2>Content Section Heading</h2>
       </header>
@@ -45,131 +53,144 @@
       <p>Intro paragraph 2 goes here.</p>
       <p>Intro paragraph 3 goes here.</p>
 
-      <!-- Placeholders for the JS countdowns -->
-      <div id="countdowns">
-        <p>Next race: <span id="countdown-next-race">--</span></p>
-        <p>Next season starts in: <span id="countdown-season">--</span></p>
+      <!-- CHANGED: countdowns moved down to their own section -->
+
+      <footer>Section Footer</footer>
+    </section>
+
+    <!-- ================= TEAMS SECTION ================= -->
+    <section id="articles"> 
+      <div class="container"> 
+        <h2>Teams</h2> 
+
+        <article class="post team1"> <!-- CHANGED: added team1 -->
+          <header>
+            <figure>
+              <img src="assets/img/williams.jpg" alt="Alex Albon driving the Williams at the 2026 Austrian Grand Prix">
+              <figcaption>Williams | Photo: <a href="https://commons.wikimedia.org/wiki/File:FIA_F1_Austria_2026_Nr._23_Albon_(1).jpg">Lukas Raich</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>, via Wikimedia Commons</figcaption>
+            </figure>
+            <h3><a href="williams.html" rel="bookmark" title="link to this post">Williams</a></h3>
+          </header>
+          <ul>
+            <li>Williams fact #1</li>
+            <li>Williams fact #2</li>
+          </ul>
+        </article>
+
+        <article class="post team2"> <!-- CHANGED: added team2 -->
+          <header>
+            <figure>
+              <img src="assets/img/mercedes.jpg" alt="Kimi Antonelli driving the Mercedes at the 2026 Bahrain Grand Prix">
+              <figcaption>Mercedes | Photo: <a href="https://commons.wikimedia.org/wiki/File:2026_Bahrain_GP_-_Mercedes_-_Kimi_Antonelli_-_Race.jpg">Liauzh</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>, via Wikimedia Commons</figcaption>
+            </figure>
+            <h3><a href="mercedes.html" rel="bookmark" title="link to this post">Mercedes</a></h3>
+          </header>
+          <ul>
+            <li>Mercedes fact #1</li>
+            <li>Mercedes fact #2</li>
+          </ul>
+        </article>
+
+        <article class="post team3"> <!-- CHANGED: added team3 -->
+          <header>
+            <figure>
+              <img src="assets/img/red_bull.jpg" alt="Max Verstappen driving the Red Bull at the 2026 Austrian Grand Prix">
+              <figcaption>Red Bull | Photo: <a href="https://commons.wikimedia.org/wiki/File:FIA_F1_Austria_2026_Nr._3_Verstappen_(1).jpg">Lukas Raich</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>, via Wikimedia Commons</figcaption>
+            </figure>
+            <h3><a href="red-bull.html" rel="bookmark" title="link to this post">Red Bull</a></h3>
+          </header>
+          <ul>
+            <li>Red Bull fact #1</li>
+            <li>Red Bull fact #2</li>
+          </ul>
+        </article>
+
+        <article class="post team4"> <!-- CHANGED: added team4 -->
+          <header>
+            <figure>
+              <img src="assets/img/ferrari.jpg" alt="Lewis Hamilton driving the Ferrari at the 2026 Austrian Grand Prix">
+              <figcaption>Ferrari | Photo: <a href="https://commons.wikimedia.org/wiki/File:FIA_F1_Austria_2026_Nr._44_Hamilton_(3).jpg">Lukas Raich</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>, via Wikimedia Commons</figcaption>
+            </figure>
+            <h3><a href="ferrari.html" rel="bookmark" title="link to this post">Ferrari</a></h3>
+          </header>
+          <ul>
+            <li>Ferrari fact #1</li>
+            <li>Ferrari fact #2</li>
+          </ul>
+        </article>
+
+        <!-- CHANGED: removed the Section Footer here -->
+      </div> <!-- CHANGED: closes container -->
+    </section>
+
+    <!-- ================= COUNTDOWNS ================= -->
+    <!-- CHANGED: new section, the countdowns from above in their own boxes -->
+    <section id="hero">
+      <div class="container">
+        <div class="countdown">
+          <p>Next race</p>
+          <span id="countdown-next-race">--</span>
+        </div>
+        <div class="countdown">
+          <p>Next season starts in</p>
+          <span id="countdown-season">--</span>
+        </div>
       </div>
-
-      <footer>Section Footer</footer>
     </section>
 
-    <!-- ================= BLOG / TEAMS SECTION ================= -->
-    <section id="blog">
-      <header>
-        <h2>Teams</h2>
-      </header>
-
-      <article class="post">
-        <header>
-          <figure>
-            <img src="assets/images/team1.jpg" alt="Team 1 image description">
-            <figcaption>Team 1 | Image source: ADD SOURCE HERE</figcaption>
-          </figure>
-          <h3><a href="#" rel="bookmark" title="link to this post">Team 1 Name</a></h3>
-        </header>
-        <ul>
-          <li>Team 1 fact #1</li>
-          <li>Team 1 fact #2</li>
-        </ul>
-      </article>
-
-      <article class="post">
-        <header>
-          <figure>
-            <img src="assets/images/team2.jpg" alt="Team 2 image description">
-            <figcaption>Team 2 | Image source: ADD SOURCE HERE</figcaption>
-          </figure>
-          <h3><a href="#" rel="bookmark" title="link to this post">Team 2 Name</a></h3>
-        </header>
-        <ul>
-          <li>Team 2 fact #1</li>
-          <li>Team 2 fact #2</li>
-        </ul>
-      </article>
-
-      <article class="post">
-        <header>
-          <figure>
-            <img src="assets/images/team3.jpg" alt="Team 3 image description">
-            <figcaption>Team 3 | Image source: ADD SOURCE HERE</figcaption>
-          </figure>
-          <h3><a href="#" rel="bookmark" title="link to this post">Team 3 Name</a></h3>
-        </header>
-        <ul>
-          <li>Team 3 fact #1</li>
-          <li>Team 3 fact #2</li>
-        </ul>
-      </article>
-
-      <article class="post">
-        <header>
-          <figure>
-            <img src="assets/images/team4.jpg" alt="Team 4 image description">
-            <figcaption>Team 4 | Image source: ADD SOURCE HERE</figcaption>
-          </figure>
-          <h3><a href="#" rel="bookmark" title="link to this post">Team 4 Name</a></h3>
-        </header>
-        <ul>
-          <li>Team 4 fact #1</li>
-          <li>Team 4 fact #2</li>
-        </ul>
-      </article>
-
-      <footer>Section Footer</footer>
-    </section>
-
-    <!-- ================= ASIDE (left column, spans 2 rows) ================= -->
+    <!-- ================= ASIDE ================= -->
     <aside role="complementary">
-      <article class="widget">
-        <header>
-          <h2>Background</h2>
-        </header>
-        <p>Background paragraph goes here.</p>
-        <footer>Widget Footer</footer>
-      </article>
+      <div class="container"> <!-- CHANGED: added container -->
+        <article class="widget">
+          <header>
+            <h2>Background</h2>
+          </header>
+          <p>Background paragraph goes here.</p>
+          <footer>Widget Footer</footer>
+        </article>
 
-      <article class="widget overview">
-        <header>
-          <h2>Driver Standings</h2>
-        </header>
-        <table>
-          <tbody>
-            <tr>
-              <td>#1</td>
-              <td>Driver Name</td>
-              <td>Points</td>
-            </tr>
-            <tr>
-              <td>#2</td>
-              <td>Driver Name</td>
-              <td>Points</td>
-            </tr>
-            <tr>
-              <td>#3</td>
-              <td>Driver Name</td>
-              <td>Points</td>
-            </tr>
-            <tr>
-              <td>#4</td>
-              <td>Driver Name</td>
-              <td>Points</td>
-            </tr>
-            <tr>
-              <td>#5</td>
-              <td>Driver Name</td>
-              <td>Points</td>
-            </tr>
-          </tbody>
-        </table>
-        <footer>Widget Footer</footer>
-      </article>
+        <article class="widget overview">
+          <header>
+            <h2>Driver Standings</h2>
+          </header>
+          <table>
+            <tbody>
+              <tr>
+                <td>#1</td>
+                <td>Driver Name</td>
+                <td>Points</td>
+              </tr>
+              <tr>
+                <td>#2</td>
+                <td>Driver Name</td>
+                <td>Points</td>
+              </tr>
+              <tr>
+                <td>#3</td>
+                <td>Driver Name</td>
+                <td>Points</td>
+              </tr>
+              <tr>
+                <td>#4</td>
+                <td>Driver Name</td>
+                <td>Points</td>
+              </tr>
+              <tr>
+                <td>#5</td>
+                <td>Driver Name</td>
+                <td>Points</td>
+              </tr>
+            </tbody>
+          </table>
+          <footer>Widget Footer</footer>
+        </article>
+      </div> <!-- CHANGED: closes container -->
     </aside>
 
     <!-- ================= SITE FOOTER (full width) ================= -->
-    <footer class="primary" role="contentinfo">
-      <p>&copy; Year Your Name | <a href="mailto:YOUR-EMAIL@ualr.edu">Report a Problem</a></p>
-      <p>Educational-use disclaimer goes here. Image sources are credited under each image.</p>
+    <footer id="colophon" role="contentinfo"> <!-- CHANGED: was class="primary" -->
+      <p>&copy; 2026 Caellum Garza | <a href="mailto:cagarza@ualr.edu">Report a Problem</a></p>
+      <p>This site was built as a student project for IFSC 11003 at UALR and is for educational use only. It is not affiliated with or endorsed by Formula 1, the FIA, or any team shown. Photos are credited under each image.</p>
     </footer>
 
   </main>
