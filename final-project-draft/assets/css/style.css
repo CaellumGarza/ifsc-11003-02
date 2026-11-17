@@ -23,7 +23,6 @@ body {
   --kerb: #ffffff;
 }
 
-
 /* Team themes */
 body[data-team="team1"] { --accent: #64c4ff; --accent-text: #15171c; --kerb: #ffffff; } /* Williams */
 body[data-team="team2"] { --accent: #27f4d2; --accent-text: #15171c; --kerb: #c0c0c0; } /* Mercedes */
@@ -103,14 +102,6 @@ header.primary {
   overflow: hidden;
 }
 
-header.primary h1 .logo {
-  height: 0.6em;
-  width: auto;
-  vertical-align: middle;
-  margin-right: 0.25em;
-}
-
-
 /* Kerb stripe along the bottom of the header */
 header.primary::after {
   content: "";
@@ -125,7 +116,6 @@ header.primary::after {
   position: relative;
 }
 
-
 header.primary h1 {
   font-size: clamp(2.5rem, 7vw, 4.5rem);
   font-weight: 900;
@@ -136,6 +126,13 @@ header.primary h1 {
 header.primary h1 a {
   color: var(--text);
   text-decoration: none;
+}
+
+header.primary h1 .logo {
+  height: 0.6em;
+  width: auto;
+  vertical-align: middle;
+  margin-right: 0.25em;
 }
 
 header.primary h2 {
@@ -289,14 +286,19 @@ section#articles .container > h2 {
   color: var(--team-color);
 }
 
+/* Photo credit links: underlined so they look clickable */
+#articles .post figcaption a:link,
+#articles .post figcaption a:visited {
+  color: var(--muted);
+  text-decoration: underline;
+}
+
 #articles ul {
   padding: 0 0 0 20px;
   margin: 0;
   color: var(--muted);
   font-size: 0.95rem;
 }
-
-
 
 
 /* ------------- Countdowns (hero) --------------- */
@@ -428,23 +430,15 @@ footer#colophon {
 }
 
 
+/* =================================================
+   TEAM PAGES
+   Colors come from each page's data-team on <body>.
+   The tabs, layout and facts table are also reused
+   on the track pages.
+   ================================================= */
 
 
-
-
-
-
-
-
-
-
-/* ---------------- Team Pages ----------------
-   Loaded after style.css, only on the 4 team pages.
-   Colors come from the page's data-team on <body>.
------------------------------------------------- */
-
-
-/* ------------- Team Tabs --------------- */
+/* ------------- Tabs (teams and tracks) --------------- */
 
 .team-tabs {
   margin-top: 2em;
@@ -475,7 +469,7 @@ footer#colophon {
   color: var(--text);
 }
 
-/* The tab for the team you're looking at */
+/* The tab for the page you're looking at */
 .team-tabs a[aria-current="page"] {
   color: var(--text);
   border-bottom-color: var(--accent);
@@ -526,7 +520,7 @@ section#team p {
 }
 
 
-/* ------------- Layout: text left, facts right --------------- */
+/* ------------- Layout: content left, table right --------------- */
 
 .team-layout {
   display: flex;
@@ -580,7 +574,7 @@ section#team p {
 }
 
 
-/* ------------- At a Glance Table --------------- */
+/* ------------- Facts Table (teams and tracks) --------------- */
 
 .team-facts {
   background: var(--panel);
@@ -614,7 +608,95 @@ section#team p {
 }
 
 
-/* ------------- Mobile --------------- */
+/* ------------- Track Pages --------------- */
+
+section#track {
+  padding: 2em 0 4em;
+}
+
+section#track > h2 {
+  font-size: clamp(2.2rem, 6vw, 3.5rem);
+}
+
+section#track h3 {
+  font-size: 1.4rem;
+  margin: 2em 0 0.75em;
+}
+
+/* Track map: keep the whole map visible, no cropping */
+.track-map {
+  flex: 2;
+  margin: 0;
+}
+
+.track-map img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: contain;
+  background: #e4e7eb;   /* light card so dark track lines show up */
+}
+
+.track-map figcaption {
+  font-size: 0.75rem;
+  color: var(--muted);
+  margin-top: 6px;
+}
+
+.track-map figcaption a:link,
+.track-map figcaption a:visited {
+  color: var(--muted);
+}
+
+/* Sectors: three boxes in F1's own sector colors */
+.sectors {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.sector {
+  flex: 1 1 220px;
+  min-height: 150px;   /* keeps empty boxes visible */
+  background: var(--panel);
+  border-top: 6px solid;
+  padding: 1em 1.25em;
+}
+
+.sector h4 {
+  margin: 0 0 0.5em;
+  font-size: 1.2rem;
+  font-style: italic;
+}
+
+.sector-1 { border-top-color: #e10600; }  /* red */
+.sector-2 { border-top-color: #00a3e0; }  /* blue */
+.sector-3 { border-top-color: #ffd700; }  /* yellow */
+
+
+/* ------------- Contact Page --------------- */
+
+section#contact {
+  padding: 2em 0 4em;
+}
+
+section#contact > h2 {
+  font-size: clamp(2.2rem, 6vw, 3.5rem);
+  margin-top: 1em;
+}
+
+section#contact p {
+  max-width: 70ch;
+}
+
+.contact-form {
+  max-width: 700px;
+  margin-top: 2em;
+  border-top: 6px solid var(--accent);
+}
+
+
+/* ------------- Media Queries: inner pages --------------- */
 
 @media screen and (max-width: 700px) {
   .team-layout {

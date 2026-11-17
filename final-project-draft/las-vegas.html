@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Las Vegas Grand Prix: track map, sectors and race info for the 2026 season.">
+  <meta name="author" content="Caellum Garza">
+  <title>Las Vegas | Lights Out</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,400;0,600;0,700;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+  <main>
+
+    <!-- ================= SITE HEADER ================= -->
+    <header class="primary" role="banner">
+      <div class="container">
+        <h1>
+          <a href="index.html">
+            <img src="assets/img/formula-one-logo.svg" alt="" class="logo">
+            Lights Out
+          </a>
+        </h1>
+        <h2>Four teams, every track and the countdown to lights out.</h2>
+        <nav role="navigation">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="williams.html">Teams</a></li>
+            <li><a href="las-vegas.html" aria-current="page">Tracks</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <div id="theme-switcher">
+          <button type="button" data-team="team1">Williams</button>
+          <button type="button" data-team="team2">Mercedes</button>
+          <button type="button" data-team="team3">Red Bull</button>
+          <button type="button" data-team="team4">Ferrari</button>
+          <button type="button" data-team="default">Default</button>
+        </div>
+      </div>
+    </header>
+
+    <!-- ================= TRACK TABS (same style as the team tabs) ================= -->
+    <nav class="team-tabs container" aria-label="Tracks">
+      <ul>
+        <li><a href="las-vegas.html" aria-current="page">Las Vegas</a></li>
+        <li><a href="qatar.html">Qatar</a></li>
+        <li><a href="abu-dhabi.html">Abu Dhabi</a></li>
+      </ul>
+    </nav>
+
+    <!-- ================= TRACK ================= -->
+    <section id="track" class="container">
+      <h2>Las Vegas Grand Prix</h2>
+
+      <div class="team-layout">
+
+        <!-- Left: track map -->
+        <figure class="track-map">
+          <img src="assets/img/las-vegas.png" alt="Map of the Las Vegas Strip Circuit showing sectors 1, 2 and 3">
+          <figcaption>Track map | <a href="https://commons.wikimedia.org/wiki/File:Las_Vegas_Strip_Circuit.png">Juan2910</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>, via Wikimedia Commons</figcaption>
+        </figure>
+
+        <!-- Right: race info table -->
+        <table class="team-facts">
+          <caption>Race info</caption>
+          <tbody>
+            <tr>
+              <th scope="row">Circuit</th>
+              <td>Las Vegas Strip Circuit</td>
+            </tr>
+            <tr>
+              <th scope="row">Location</th>
+              <td>Las Vegas, Nevada, USA</td>
+            </tr>
+            <tr>
+              <th scope="row">Race date</th>
+              <td>November 21, 2026</td>
+            </tr>
+            <tr>
+              <th scope="row">Track length</th>
+              <td>ADD km</td>
+            </tr>
+            <tr>
+              <th scope="row">Laps</th>
+              <td>ADD NUMBER</td>
+            </tr>
+          </tbody>
+        </table>
+
+      </div>
+
+      <!-- ================= SECTORS (leave blank for now) ================= -->
+      <h3>Sectors</h3>
+      <div class="sectors">
+        <article class="sector sector-1">
+          <h4>Sector 1</h4>
+          <p><!-- Sector 1 notes go here --></p>
+        </article>
+        <article class="sector sector-2">
+          <h4>Sector 2</h4>
+          <p><!-- Sector 2 notes go here --></p>
+        </article>
+        <article class="sector sector-3">
+          <h4>Sector 3</h4>
+          <p><!-- Sector 3 notes go here --></p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ================= SITE FOOTER ================= -->
+    <footer id="colophon" role="contentinfo">
+      <p>&copy; 2026 Caellum Garza | <a href="mailto:cagarza@ualr.edu">Report a Problem</a></p>
+      <p>This site was built as a student project for IFSC 11003 at UALR and is for educational use only. It is not affiliated with or endorsed by Formula 1, the FIA, or any team shown. Photos are credited under each image.</p>
+    </footer>
+
+  </main>
+</body>
+
+</html>

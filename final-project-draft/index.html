@@ -4,10 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Site Description">
-  <meta name="author" content="Caellum">
-  <title>Site Title</title>
-  <!-- CHANGED: added the font the CSS uses -->
+  <meta name="description" content="Lights Out: a fan guide to four F1 teams, the remaining 2026 tracks and the countdown to the next race.">
+  <meta name="author" content="Caellum Garza">
+  <title>Home | Lights Out</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,400;0,600;0,700;1,900&display=swap" rel="stylesheet">
@@ -17,23 +16,25 @@
 <body>
   <main>
 
-    <!-- ================= SITE HEADER (full width) ================= -->
+    <!-- ================= SITE HEADER ================= -->
     <header class="primary" role="banner">
-      <div class="container"> <!-- CHANGED: added container -->
+      <div class="container">
         <h1>
-  <a href="index.html">
-    <img src="assets/img/formula-one-logo.svg" alt="" class="logo">Lights Out</a></h1>
+          <a href="index.html">
+            <img src="assets/img/formula-one-logo.svg" alt="" class="logo">
+            Lights Out
+          </a>
+        </h1>
         <h2>Four teams, every track and the countdown to lights out.</h2>
         <nav role="navigation">
           <ul>
-            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html" aria-current="page">Home</a></li>
             <li><a href="williams.html">Teams</a></li>
-            <li><a href="tracks.html">Tracks</a></li>
+            <li><a href="las-vegas.html">Tracks</a></li>
             <li><a href="contact.html">Contact</a></li>
           </ul>
         </nav>
-        <!-- Placeholder for the team-color theme switcher (JS later) -->
-        <!-- Also use a default dark theme on landing page -->
+        <!-- Team-color theme switcher (JS later). Default dark theme on landing page. -->
         <div id="theme-switcher">
           <button type="button" data-team="team1">Williams</button>
           <button type="button" data-team="team2">Mercedes</button>
@@ -41,29 +42,25 @@
           <button type="button" data-team="team4">Ferrari</button>
           <button type="button" data-team="default">Default</button>
         </div>
-      </div> <!-- CHANGED: closes container -->
+      </div>
     </header>
 
-    <!-- ================= CONTENT SECTION ================= -->
-    <section id="content" class="container"> <!-- CHANGED: added class="container" -->
+    <!-- ================= INTRO ================= -->
+    <section id="content" class="container">
       <header>
         <h2>Content Section Heading</h2>
       </header>
       <p>Intro paragraph 1 goes here.</p>
       <p>Intro paragraph 2 goes here.</p>
       <p>Intro paragraph 3 goes here.</p>
-
-      <!-- CHANGED: countdowns moved down to their own section -->
-
-      <footer>Section Footer</footer>
     </section>
 
-    <!-- ================= TEAMS SECTION ================= -->
-    <section id="articles"> 
-      <div class="container"> 
-        <h2>Teams</h2> 
+    <!-- ================= TEAMS ================= -->
+    <section id="articles">
+      <div class="container">
+        <h2>Teams</h2>
 
-        <article class="post team1"> <!-- CHANGED: added team1 -->
+        <article class="post team1">
           <header>
             <figure>
               <img src="assets/img/williams.jpg" alt="Alex Albon driving the Williams at the 2026 Austrian Grand Prix">
@@ -77,7 +74,7 @@
           </ul>
         </article>
 
-        <article class="post team2"> <!-- CHANGED: added team2 -->
+        <article class="post team2">
           <header>
             <figure>
               <img src="assets/img/mercedes.jpg" alt="Kimi Antonelli driving the Mercedes at the 2026 Bahrain Grand Prix">
@@ -91,7 +88,7 @@
           </ul>
         </article>
 
-        <article class="post team3"> <!-- CHANGED: added team3 -->
+        <article class="post team3">
           <header>
             <figure>
               <img src="assets/img/red-bull.jpg" alt="Max Verstappen driving the Red Bull at the 2026 Austrian Grand Prix">
@@ -105,7 +102,7 @@
           </ul>
         </article>
 
-        <article class="post team4"> <!-- CHANGED: added team4 -->
+        <article class="post team4">
           <header>
             <figure>
               <img src="assets/img/ferrari.jpg" alt="Lewis Hamilton driving the Ferrari at the 2026 Austrian Grand Prix">
@@ -119,12 +116,10 @@
           </ul>
         </article>
 
-        <!-- CHANGED: removed the Section Footer here -->
-      </div> <!-- CHANGED: closes container -->
+      </div>
     </section>
 
-    <!-- ================= COUNTDOWNS ================= -->
-    <!-- CHANGED: new section, the countdowns from above in their own boxes -->
+    <!-- ================= COUNTDOWNS (JS later) ================= -->
     <section id="hero">
       <div class="container">
         <div class="countdown">
@@ -140,13 +135,12 @@
 
     <!-- ================= ASIDE ================= -->
     <aside role="complementary">
-      <div class="container"> <!-- CHANGED: added container -->
+      <div class="container">
         <article class="widget">
           <header>
             <h2>Background</h2>
           </header>
           <p>Background paragraph goes here.</p>
-          <footer>Widget Footer</footer>
         </article>
 
         <article class="widget overview">
@@ -154,41 +148,48 @@
             <h2>Driver Standings</h2>
           </header>
           <table>
+            <thead>
+              <tr>
+                <th>Pos</th>
+                <th>Driver</th>
+                <th>Points</th>
+              </tr>
+            </thead>
             <tbody>
               <tr>
-                <td>#1</td>
+                <td>1</td>
                 <td>Driver Name</td>
-                <td>Points</td>
+                <td>0</td>
               </tr>
               <tr>
-                <td>#2</td>
+                <td>2</td>
                 <td>Driver Name</td>
-                <td>Points</td>
+                <td>0</td>
               </tr>
               <tr>
-                <td>#3</td>
+                <td>3</td>
                 <td>Driver Name</td>
-                <td>Points</td>
+                <td>0</td>
               </tr>
               <tr>
-                <td>#4</td>
+                <td>4</td>
                 <td>Driver Name</td>
-                <td>Points</td>
+                <td>0</td>
               </tr>
               <tr>
-                <td>#5</td>
+                <td>5</td>
                 <td>Driver Name</td>
-                <td>Points</td>
+                <td>0</td>
               </tr>
             </tbody>
           </table>
-          <footer>Widget Footer</footer>
+          <footer>Standings as of: ADD DATE</footer>
         </article>
-      </div> <!-- CHANGED: closes container -->
+      </div>
     </aside>
 
-    <!-- ================= SITE FOOTER (full width) ================= -->
-    <footer id="colophon" role="contentinfo"> <!-- CHANGED: was class="primary" -->
+    <!-- ================= SITE FOOTER ================= -->
+    <footer id="colophon" role="contentinfo">
       <p>&copy; 2026 Caellum Garza | <a href="mailto:cagarza@ualr.edu">Report a Problem</a></p>
       <p>This site was built as a student project for IFSC 11003 at UALR and is for educational use only. It is not affiliated with or endorsed by Formula 1, the FIA, or any team shown. Photos are credited under each image.</p>
     </footer>
